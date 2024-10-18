@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate SA ID Numbers</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="container">
+    <h3>Generate (Fake) South-African ID Numbers</h3>
+
+    <form id="f1" name="f1" onsubmit="showSingleId(); return false">
+      <div class="input-group">
+        <label for="year">Year of Birth</label>
+        <select id="year" name="year"></select>
+        <label><input type="checkbox" id="randomYear"> Random</label>
+      </div>
+      
+      <div class="input-group">
+        <label for="month">Month of Birth</label>
+        <select id="month" name="month"></select>
+        <label><input type="checkbox" id="randomMonth"> Random</label>
+      </div>
+      
+      <div class="input-group">
+        <label for="day">Day of Birth</label>
+        <select id="day" name="day"></select>
+        <label><input type="checkbox" id="randomDay"> Random</label>
+      </div>      
+
+      <div class="input-group">
+        <input type="radio" name="gender" id="female" value="female" checked />
+        <label for="female">Female</label><br />
+        <input type="radio" name="gender" id="male" value="male" />
+        <label for="male">Male</label>
+        <label><input type="checkbox" id="randomGender"> Random</label>
+      </div>
+
+      <div class="input-group">
+        <input type="radio" name="citizenship" id="citizen" value="0" checked />
+        <label for="citizen">Citizen</label><br />
+        <input type="radio" name="citizenship" id="noncitizen" value="1" />
+        <label for="noncitizen">Non-Citizen</label>
+        <label><input type="checkbox" id="randomCitizenship"> Random</label>
+      </div>
+
+      <div class="input-group">
+        <button type="submit">Generate Single ID</button>
+      </div>
+
+      <div id="result"></div>
+
+      <div class="input-group">
+        <label for="idCount">Number of IDs to export to text file</label>
+        <input type="number" id="idCount" min="1" />
+      </div>
+
+      <div class="input-group">
+        <button type="button" onclick="generateMultipleIds()">Export Multiple to Textfile</button>
+      </div>
+
+      <!-- New button to redirect to sequential.html -->
+      <div class="input-group">
+        <button type="button" onclick="location.href='sequential.html'">Go to Sequential ID Generator</button>
+      </div>
+    </form>
+
+    <h3>How South African ID Numbers Work</h3>
+    <p>The ID number format is: YYMMDDGSSSCAZ, where:</p>
+    <ul>
+      <li><strong>YYMMDD</strong>: Date of birth</li>
+      <li><strong>G</strong>: Gender (0-4999 for females, 5000-9999 for males)</li>
+      <li><strong>SSS</strong>: Daily sequence number</li>
+      <li><strong>C</strong>: Citizenship (0 for SA citizens, 1 for permanent residents)</li>
+      <li><strong>A</strong>: Race indicator (8 or 9)</li>
+      <li><strong>Z</strong>: Checksum digit (calculated using the Luhn algorithm)</li>
+    </ul>
+  </div>
+
+</body>
+</html>
