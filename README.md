@@ -30,7 +30,7 @@ The checksum ensures the validity of the ID number. Here's how it's calculated:
 2. Sum all the digits.
 3. If the total modulo 10 is `0`, the ID number is valid. Otherwise, the checksum digit is adjusted accordingly.
 
-### Example Code Snippet (Python):
+### Luhn Algorithm Code Snippet (Python)
 
 ```python
 def calculate_luhn(id_number):
@@ -51,16 +51,18 @@ def calculate_luhn(id_number):
 id_number = '800101500908'
 checksum = calculate_luhn(id_number)
 print(f"ID Number: {id_number}{checksum}")
+```
+See ![Luhn Algorithm in Other Languages]()
 
 
-Features:
+### Features
 - Random ID Generation: Generate random valid ID numbers with customizable parameters like birthdate and gender.
 - Export Functionality: Export the generated ID numbers to a text file.
 - Validation: Ensures that the ID number conforms to the South African format and is validated using the Luhn algorithm.
 - Generate Sequential ID Numbers
 
 
-Usage:
+### Usage
 Visit https://digifend.github.io/Generate-SA-ID-Number/ to use the tool and generate South African ID numbers.
 
 
