@@ -1,23 +1,22 @@
 # South African ID Number Generator
 
-[veergosai.github.io/Generate-SA-ID-Number](https://veergosai.github.io/Generate-SA-ID-Number)
+https://digifend.github.io/Generate-SA-ID-Number/
 
 This project generates valid South African ID numbers based on the following format:
 
-YYMMDDGSSSCAZ
+**YYMMDDGSSSCAZ**
 
 
 ### Breakdown of the ID Format:
 - **YYMMDD**: Represents the date of birth (DoB) in the format `YYMMDD`.
 - **GSSS**: This is the daily sequence number:
-  - Female newborns: Assigned numbers from `0000` to `4999`.
+  - Female newborns: Assigned numbers from `0001` to `4999`.
   - Male newborns: Assigned numbers from `5000` to `9999`.
   - The sequence resets each day.
 - **C**: Citizenship status:
   - `0` if the person is a South African citizen.
   - `1` if the person is a permanent resident.
-- **A**: This number is typically `8` or `9`:
-  - Prior to 1994, this number was used to indicate the race of the ID holder.
+- **A**: This number is always `8`:
 - **Z**: The final digit is a checksum calculated using the **Luhn algorithm**.
 
 ### Luhn Algorithm Checksum Calculation:
@@ -55,7 +54,10 @@ Features:
 - Random ID Generation: Generate random valid ID numbers with customizable parameters like birthdate and gender.
 - Export Functionality: Export the generated ID numbers to a text file.
 - Validation: Ensures that the ID number conforms to the South African format and is validated using the Luhn algorithm.
+- Generate Sequential ID Numbers
 
 
 Usage:
-Visit www.veergosai.github.io/Generate-SA-ID-Number to use the tool and generate South African ID numbers.
+Visit https://digifend.github.io/Generate-SA-ID-Number/ to use the tool and generate South African ID numbers.
+
+
