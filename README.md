@@ -52,8 +52,7 @@ id_number = '800101500908'
 checksum = calculate_luhn(id_number)
 print(f"ID Number: {id_number}{checksum}")
 ```
-See ![Luhn Algorithm in Other Languages]()
-
+[Luhn Algorithm In Other Coding Languages](https://github.com/Digifend/Generate-SA-ID-Number/blob/main/other_luhn/other_luhn.md)
 
 ### Features
 - Random ID Generation: Generate random valid ID numbers with customizable parameters like birthdate and gender.
