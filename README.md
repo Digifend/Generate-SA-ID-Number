@@ -19,6 +19,9 @@ This project generates valid South African ID numbers based on the following for
 - **A**: This number is always `8`:
 - **Z**: The final digit is a checksum calculated using the **Luhn algorithm**.
 
+  ![ID Numbers As Explained By The Western Cape Government](https://raw.githubusercontent.com/digifend/Generate-SA-ID-Number/main/WC_ID_Decoded.png)
+
+
 ### Luhn Algorithm Checksum Calculation:
 
 The checksum ensures the validity of the ID number. Here's how it's calculated:
